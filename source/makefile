@@ -17,7 +17,7 @@ $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 pilhamake: pilha_teste.cpp pilha.c
-	g++ -std=c++11 -o pilha_teste pilha_teste.cpp pilha.c -I../include
+	g++ -std=c++11 -o pilha_teste -ftest-coverage -fprofile-arcs pilha_teste.cpp pilha.c -I../include
 
 .PHONY: clean
 

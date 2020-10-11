@@ -1,3 +1,14 @@
+/**
+ * @file pilha_teste.cpp
+ * @author João Marcelo Nunes Chaves
+ * @brief Arquivo de testes para a biblioteca de pilha implementadas por lista encadeada
+ * @version 1.0
+ * @date 2020-10-11
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
+
 #define CATCH_CONFIG_MAIN
 
 #ifndef _Catch
@@ -10,6 +21,12 @@
     #include "pilha.h"
 #endif
 
+/**
+ * @brief Test case para testar a criação de uma pilha
+ * 
+ * Aceitação ocorre com uma pilha alocado em memória e com um tamanho máximo definido na chamada da função
+ * A pilha também deve estar vazia
+ */
 TEST_CASE("Criar uma pilha vazia com um tamanho máximo de elementos")
 {
   Stack *stack;
@@ -19,6 +36,12 @@ TEST_CASE("Criar uma pilha vazia com um tamanho máximo de elementos")
   REQUIRE( stack->actualSize == 0 );
 }
 
+/**
+ * @brief Test case para empilhar um elemento na pilha
+ * 
+ * Ao final do teste, a pilha deve ter sido criada, seu tamanho deve ser de 1 e 
+ * o elemento passado na função push deve estar no topo da pilha.
+ */
 TEST_CASE("Empilhar um elemento do tipo inteiro")
 {
   Stack *stack;
@@ -31,6 +54,11 @@ TEST_CASE("Empilhar um elemento do tipo inteiro")
   REQUIRE( stack->top->itemType->data == &item);
 }
 
+/**
+ * @brief Test case que empilha 2 elementos e desempilha um elemento da pilha.
+ * Aceitação ocorre com a pilha com o tamanho de 1 elemento, o elemento retirado sendo
+ * igual ao último elemento inserido e o topo da pilha com o primeiro elemento inserido.
+ */
 TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
 {
   Stack *stack;
@@ -48,6 +76,12 @@ TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
   REQUIRE(*(int *)popped_item == item2);
 }
 
+/**
+ * @brief Test case para testar a capacidade da pilha em empilhar diferentes tipos de elementos.
+ * Aceitação ocorre com a pilha criada, seu tamanho igual a 1, seu topo como o primeiro elemento empilhado
+ * e o elemento retirado sendo o char que foi empilhado por último.
+ * 
+ */
 TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
 {
   Stack *stack;
@@ -65,6 +99,11 @@ TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
   REQUIRE(*(char *)popped_item == item2);
 }
 
+/**
+ * @brief Test case para a destruição da pilha na memória.
+ * Aceitação ocorre com o ponteiro da pilha sendo NULL.
+ * 
+ */
 TEST_CASE("Destroi uma pilha de 3 elementos")
 {
   Stack *stack = NULL;
@@ -80,6 +119,11 @@ TEST_CASE("Destroi uma pilha de 3 elementos")
   REQUIRE( stack == NULL );
 }
 
+/**
+ * @brief Test case para empilhar em um pilha que já está com capacidade máxima
+ * Aceitação ocorre com a pilha com o número de elementos do seu tamanho máximo e
+ * o topo sendo o último elemento permitido inserido.
+ */
 TEST_CASE("Tenta empilhar em uma pilha já cheia")
 {
   Stack *stack;
@@ -101,6 +145,12 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   printf("----------------------------------\n");
 }
 
+/**
+ * @brief Test case para desempilhar em um pilha vazia
+ * Ocorre um print para o usuário avisando que a pilha está vazia.
+ * Criterio de aceitação ocorre com a pilha criada, seu tamanho em 0 e
+ * seu topo como NULL.
+ */
 TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
 {
   Stack *stack;
@@ -120,6 +170,13 @@ TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
   printf("----------------------------------\n");
 }
 
+/**
+ * @brief Test case para verificar se a pilha está cheia.
+ * Aceitação ocorre com a pilha criada, seu tamanho como o tamanho máximo da pilha e
+ * o retorno da função is_full deve ser true.
+ * 
+ */
+
 TEST_CASE("Empilha 2 elementos verifica se a pilha está cheia")
 {
   Stack *stack;
@@ -135,6 +192,13 @@ TEST_CASE("Empilha 2 elementos verifica se a pilha está cheia")
   REQUIRE( full == true);
 }
 
+/**
+ * @brief Test case para verificar se a pilha está vazia.
+ * Aceitação ocorre com uma pilha criada, seu tamanho atual como 0
+ * e o retorno da função is_empty como true.
+ * 
+ */
+
 TEST_CASE("Verifica se a pilha está vazia")
 {
   Stack *stack;
@@ -146,7 +210,10 @@ TEST_CASE("Verifica se a pilha está vazia")
   REQUIRE( empty == true);
 }
 
-
+/**
+ * @brief Test case que empilha dois elementos, desempilha os mesmos e verifica se a pilha está vazia
+ * Aceitação ocorre com a pilha criada, seu tamanho em zero e o retorno da função is_empty como true
+ */
 TEST_CASE("Empilha dois elementos, desempilha os mesmos e verifica se a pilha está vazia")
 {
   Stack *stack;
@@ -164,6 +231,11 @@ TEST_CASE("Empilha dois elementos, desempilha os mesmos e verifica se a pilha es
   REQUIRE( empty == true);
 }
 
+/**
+ * @brief Test case para retornar o topo da pilha
+ * Aceitação ocorre com o elemento retornado da função top como sendo, de fato, o topo da pilha.
+ * 
+ */
 TEST_CASE("Retorna o top da pilha")
 {
   Stack *stack;
@@ -178,6 +250,12 @@ TEST_CASE("Retorna o top da pilha")
   REQUIRE( s->itemType->data == &item2);
 }
 
+/**
+ * @brief Test case para testar o aumento do tamanho máximo da pilha.
+ * Aceitação ocorre com tamanho da pilha atualizado, seu tamanho máximo atualizado e 
+ * o topo sendo o último elemento inserido após a mudança de tamanho máximo.
+ * 
+ */
 TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
 {
   Stack *stack;
@@ -199,6 +277,13 @@ TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
   REQUIRE(s->itemType->data == &item3);
 }
 
+/**
+ * @brief Test case para a diminuição do tamanho da pilha
+ * Aceitação ocorre com um print para o usuário avisando sobre a falha e sobre a por que da falha (perda de dados),
+ * pilha criada, seu tamanho máximo ainda sendo o tamanho inicial e seu tamanho atual sendo igual ao tamanho máximo inicial.
+ * O retorno da função size deve ser false.
+ * 
+ */
 TEST_CASE("Cria uma pilha e diminui seu tamanho")
 {
   Stack *stack;
