@@ -63,3 +63,18 @@ TEST_CASE("Empilha um inteiro e um char e retira desempilha o elemento tipo char
   REQUIRE( stack->top->itemType->data == &item1);
   REQUIRE(*(char *)popped_item == item2);
 }
+
+TEST_CASE("Destroi uma pilha de 3 elementos")
+{
+  Stack *stack = NULL;
+  int item1 = 5;
+  char item2 = 'c';
+  int item3 = 10;
+
+  stack = create_stack(3);
+  push(stack, &item1);
+  push(stack, &item2);
+  push(stack, &item3);
+  destroy_stack(&stack);
+  REQUIRE( stack == NULL );
+}

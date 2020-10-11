@@ -40,3 +40,14 @@ void* pop(Stack *p){
     }
 }
 
+void destroy_stack (Stack **p){
+    StackNode *s = (*p)->top;
+    while (s != NULL){
+        StackNode *aux = s->next;
+        free(s);
+        s = aux;
+    } 
+    free(*p);
+    *p = NULL;
+}
+
