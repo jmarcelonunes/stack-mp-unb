@@ -18,6 +18,7 @@ TEST_CASE("Criar uma pilha vazia com um tamanho máximo de elementos")
   REQUIRE( stack->maxSize == 4 );
   REQUIRE( stack->actualSize == 0 );
 }
+
 TEST_CASE("Empilhar um elemento do tipo inteiro")
 {
   Stack *stack;
@@ -87,7 +88,7 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   float item3 = 10;
   float item4 = 20;
 
-  printf("Teste pilha cheia ----------------------------------\n");
+  printf("---------------------------------- Teste pilha cheia ----------------------------------\n");
   stack = create_stack(3);
   push(stack, &item1);
   push(stack, &item2);
@@ -97,6 +98,7 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 3 );
   REQUIRE( stack->top->itemType->data == &item3);
+  printf("----------------------------------\n");
 }
 
 TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
@@ -104,7 +106,7 @@ TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
   Stack *stack;
   int item1 = 5;
   char item2 = 'c';
-  printf("Teste pilha vazia ----------------------------------\n");
+  printf("---------------------------------- Teste pilha vazia ----------------------------------\n");
   stack = create_stack(2);
   push(stack, &item1);
   push(stack, &item2);
@@ -115,4 +117,64 @@ TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( stack->top == NULL);
+  printf("----------------------------------\n");
 }
+
+TEST_CASE("Empilha 2 elementos verifica se a pilha está cheia")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  bool full = false;
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  full = is_full(stack);
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 2 );
+  REQUIRE( full == true);
+}
+
+TEST_CASE("Verifica se a pilha está vazia")
+{
+  Stack *stack;
+  bool empty = false;
+  stack = create_stack(2);
+  empty = is_empty(stack);
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 0 );
+  REQUIRE( empty == true);
+}
+
+
+TEST_CASE("Empilha dois elementos, desempilha os mesmos e verifica se a pilha está vazia")
+{
+  Stack *stack;
+  bool empty = false;
+  int item1 = 5;
+  char item2 = 'c';
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  pop(stack);
+  pop(stack);
+  empty = is_empty(stack);
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 0 );
+  REQUIRE( empty == true);
+}
+
+TEST_CASE("Retorna o top da pilha")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  StackNode *s = NULL;
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  s = top(stack);
+  REQUIRE( stack != NULL );
+  REQUIRE( s->itemType->data == &item2);
+}
+

@@ -51,3 +51,40 @@ void destroy_stack (Stack **p){
     *p = NULL;
 }
 
+StackNode* top (Stack *p){
+    return p->top;
+}
+
+bool is_empty (Stack *p){
+    if(p->top == NULL)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool is_full (Stack *p){
+    if(p->actualSize == p->maxSize)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool set_size (Stack *p, int size){
+    if(p->actualSize < size){
+        p->maxSize = size;
+        return true;
+    }
+    else{
+        printf("o tamanho da pilha não pode ser reduzido pois haverá perda de dados");
+        return false;
+    }
+}
+
