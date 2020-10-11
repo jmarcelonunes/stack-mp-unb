@@ -7,17 +7,17 @@ LDIR =../lib
 
 LIBS=-lm
 
-_DEPS = pilha.h
+_DEPS = pilha.h catch.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = pilha.o pilha_teste.o 
+_OBJ = pilha.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-pilhamake: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+pilhamake: pilha_teste.cpp pilha.c
+	g++ -std=c++11 -o pilha_teste pilha_teste.cpp pilha.c -I../include
 
 .PHONY: clean
 
