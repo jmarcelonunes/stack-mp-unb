@@ -178,3 +178,43 @@ TEST_CASE("Retorna o top da pilha")
   REQUIRE( s->itemType->data == &item2);
 }
 
+TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  char item3 = 'b';
+  StackNode *s = NULL;
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  
+  if(set_size(stack, 3)){
+    push(stack, &item3);
+  }
+  s = top(stack);
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 3);
+  REQUIRE( stack->maxSize == 3);
+  REQUIRE(s->itemType->data == &item3);
+}
+
+TEST_CASE("Cria uma pilha e diminui seu tamanho")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  bool size = false;
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  printf("---------------------------------- Teste redução pilha ----------------------------------\n");
+  size = set_size(stack, 1);
+
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 2);
+  REQUIRE( stack->maxSize == 2);
+  REQUIRE(size == false);
+  printf("----------------------------------\n");
+}
+
