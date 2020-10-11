@@ -47,7 +47,7 @@ TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
   REQUIRE(*(int *)popped_item == item2);
 }
 
-TEST_CASE("Empilha um inteiro e um char e retira desempilha o elemento tipo char")
+TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
 {
   Stack *stack;
   int item1 = 5;
@@ -77,4 +77,42 @@ TEST_CASE("Destroi uma pilha de 3 elementos")
   push(stack, &item3);
   destroy_stack(&stack);
   REQUIRE( stack == NULL );
+}
+
+TEST_CASE("Tenta empilhar em uma pilha já cheia")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  float item3 = 10;
+  float item4 = 20;
+
+  printf("Teste pilha cheia ----------------------------------\n");
+  stack = create_stack(3);
+  push(stack, &item1);
+  push(stack, &item2);
+  push(stack, &item3);
+  push(stack, &item4);
+
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 3 );
+  REQUIRE( stack->top->itemType->data == &item3);
+}
+
+TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  printf("Teste pilha vazia ----------------------------------\n");
+  stack = create_stack(2);
+  push(stack, &item1);
+  push(stack, &item2);
+  pop(stack);
+  pop(stack);
+  pop(stack);
+
+  REQUIRE( stack != NULL );
+  REQUIRE( stack->actualSize == 0 );
+  REQUIRE( stack->top == NULL);
 }
