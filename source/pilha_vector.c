@@ -23,6 +23,7 @@ Stack* create_stack(int maxsize)
     p->maxSize = maxsize;
     p->vector = (ItemType *) malloc(p->maxSize * sizeof(ItemType));
     p->actualSize = 0;
+    p->top = NULL;
     return p;
 }
 
@@ -38,7 +39,7 @@ Stack* create_stack(int maxsize)
  */
 void push (Stack *p, void *element){
     if(p->actualSize == p->maxSize){
-        printf("Capacidade cheia");
+        printf("Pilha está cheia!\n");
     }
     else{
         ItemType *e = (ItemType*)malloc(sizeof(element));
@@ -66,6 +67,7 @@ void* pop(Stack *p){
     }else{
         int i = -1;
         void *r = &i;
+        printf("Pilha está vazia.\n");
         return r;
     }
 }
@@ -80,7 +82,6 @@ void* pop(Stack *p){
  * @param p 
  */
 void destroy_stack (Stack **p){
-    StackNode *s = (*p)->top;
     free((*p)->vector);
     free(*p);
     *p = NULL;
@@ -103,6 +104,50 @@ bool is_empty (Stack *p){
     }
     else
     {
+        return false;
+    }
+}
+
+/**
+ * @brief Função para verificar se a pilha está cheia
+ * Caso o tamanho atual seja igual ao tamanho máximo retorna true,
+ * caso contrário retorna false
+ * 
+ * @param p 
+ * @return true 
+ * @return false 
+ */
+bool is_full (Stack *p){
+    if(p->actualSize == p->maxSize)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/**
+ * @brief Função que retorna o topo da pilha
+ * Retorna o topo da pilha passada para a função
+ * 
+ * @param p 
+ * @return StackNode* 
+ */
+void* top (Stack *p){
+    return p->vector[p->actualSize - 1].data;
+}
+
+
+bool set_size (Stack *p, int size){
+    if(p->actualSize < size){
+        p->maxSize = size;
+        p->vector = (ItemType *)realloc(p->vector, p->maxSize*sizeof(ItemType));
+        return true;
+    }
+    else{
+        printf("o tamanho da pilha não pode ser reduzido pois haverá perda de dados");
         return false;
     }
 }

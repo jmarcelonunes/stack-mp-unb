@@ -86,9 +86,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa8c3b43ca48c88bf7a97520a9312713c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#aa8c3b43ca48c88bf7a97520a9312713c">destroy_stack</a> (Stack **p)</td></tr>
 <tr class="memdesc:aa8c3b43ca48c88bf7a97520a9312713c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como NULL.  <a href="#aa8c3b43ca48c88bf7a97520a9312713c">More...</a><br /></td></tr>
 <tr class="separator:aa8c3b43ca48c88bf7a97520a9312713c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ed721b8eb4fed735fa11b00c90b481"><td class="memItemLeft" align="right" valign="top">StackNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#a22ed721b8eb4fed735fa11b00c90b481">top</a> (Stack *p)</td></tr>
-<tr class="memdesc:a22ed721b8eb4fed735fa11b00c90b481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna o topo da pilha Retorna o topo da pilha passada para a função.  <a href="#a22ed721b8eb4fed735fa11b00c90b481">More...</a><br /></td></tr>
-<tr class="separator:a22ed721b8eb4fed735fa11b00c90b481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f283ae57cd01f8b76075c109d74db7c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#a6f283ae57cd01f8b76075c109d74db7c">top</a> (Stack *p)</td></tr>
+<tr class="memdesc:a6f283ae57cd01f8b76075c109d74db7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna o topo da pilha Retorna o topo da pilha passada para a função.  <a href="#a6f283ae57cd01f8b76075c109d74db7c">More...</a><br /></td></tr>
+<tr class="separator:a6f283ae57cd01f8b76075c109d74db7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d9cd3568382eb8adae2af010001c1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#ad3d9cd3568382eb8adae2af010001c1d">is_empty</a> (Stack *p)</td></tr>
 <tr class="memdesc:ad3d9cd3568382eb8adae2af010001c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false.  <a href="#ad3d9cd3568382eb8adae2af010001c1d">More...</a><br /></td></tr>
 <tr class="separator:ad3d9cd3568382eb8adae2af010001c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,14 +321,14 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="a22ed721b8eb4fed735fa11b00c90b481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ed721b8eb4fed735fa11b00c90b481">&#9670;&nbsp;</a></span>top()</h2>
+<a id="a6f283ae57cd01f8b76075c109d74db7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f283ae57cd01f8b76075c109d74db7c">&#9670;&nbsp;</a></span>top()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">StackNode* top </td>
+          <td class="memname">void* top </td>
           <td>(</td>
           <td class="paramtype">Stack *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>

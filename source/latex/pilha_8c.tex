@@ -17,7 +17,7 @@ void $\ast$ \mbox{\hyperlink{pilha_8c_a4d525657d0356ef69fc20e09a0dee2bf}{pop}} (
 \begin{DoxyCompactList}\small\item\em Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pilha_8c_aa8c3b43ca48c88bf7a97520a9312713c}{destroy\+\_\+stack}} (Stack $\ast$$\ast$p)
 \begin{DoxyCompactList}\small\item\em Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como N\+U\+LL. \end{DoxyCompactList}\item 
-Stack\+Node $\ast$ \mbox{\hyperlink{pilha_8c_a22ed721b8eb4fed735fa11b00c90b481}{top}} (Stack $\ast$p)
+void $\ast$ \mbox{\hyperlink{pilha_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} (Stack $\ast$p)
 \begin{DoxyCompactList}\small\item\em Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{pilha_8c_ad3d9cd3568382eb8adae2af010001c1d}{is\+\_\+empty}} (Stack $\ast$p)
 \begin{DoxyCompactList}\small\item\em Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false. \end{DoxyCompactList}\item 
@@ -175,11 +175,11 @@ true
 
 false 
 \end{DoxyReturn}
-\mbox{\Hypertarget{pilha_8c_a22ed721b8eb4fed735fa11b00c90b481}\label{pilha_8c_a22ed721b8eb4fed735fa11b00c90b481}} 
+\mbox{\Hypertarget{pilha_8c_a6f283ae57cd01f8b76075c109d74db7c}\label{pilha_8c_a6f283ae57cd01f8b76075c109d74db7c}} 
 \index{pilha.c@{pilha.c}!top@{top}}
 \index{top@{top}!pilha.c@{pilha.c}}
 \subsubsection{\texorpdfstring{top()}{top()}}
-{\footnotesize\ttfamily Stack\+Node$\ast$ top (\begin{DoxyParamCaption}\item[{Stack $\ast$}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ top (\begin{DoxyParamCaption}\item[{Stack $\ast$}]{p }\end{DoxyParamCaption})}
 
 
 
