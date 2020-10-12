@@ -109,8 +109,8 @@ void destroy_stack (Stack **p){
  * @param p 
  * @return StackNode* 
  */
-StackNode* top (Stack *p){
-    return p->top;
+void* top (Stack *p){
+    return p->top->itemType->data;
 }
 
 

@@ -47,11 +47,12 @@ TEST_CASE("Empilhar um elemento do tipo inteiro")
   Stack *stack;
   int item = 5;
   stack = create_stack(3);
+  void *top_item;
   push(stack, &item);
-
+  top_item = top(stack);
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
-  REQUIRE( stack->top->itemType->data == &item);
+  REQUIRE( top_item == &item);
 }
 
 /**
@@ -64,15 +65,17 @@ TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
   Stack *stack;
   int item1 = 5;
   int item2 = 2;
-  void * popped_item;
-
+  void *popped_item;
+  void *top_item;
   stack = create_stack(3);
   push(stack, &item1);
   push(stack, &item2);
   popped_item = pop(stack);
+  top_item = top(stack);
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
-  REQUIRE( stack->top->itemType->data == &item1);
+  REQUIRE( top_item == &item1);
+  //REQUIRE( stack->top->itemType->data == &item1);
   REQUIRE(*(int *)popped_item == item2);
 }
 
@@ -87,15 +90,17 @@ TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
   Stack *stack;
   int item1 = 5;
   char item2 = 'c';
-  void * popped_item;
+  void *popped_item;
+  void *top_item;
 
   stack = create_stack(3);
   push(stack, &item1);
   push(stack, &item2);
   popped_item = pop(stack);
+  top_item = top(stack);
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
-  REQUIRE( stack->top->itemType->data == &item1);
+  REQUIRE( top_item == &item1);
   REQUIRE(*(char *)popped_item == item2);
 }
 
@@ -131,6 +136,7 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   char item2 = 'c';
   float item3 = 10;
   float item4 = 20;
+  void *top_item;
 
   printf("---------------------------------- Teste pilha cheia ----------------------------------\n");
   stack = create_stack(3);
@@ -138,10 +144,10 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   push(stack, &item2);
   push(stack, &item3);
   push(stack, &item4);
-
+  top_item = top(stack);
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 3 );
-  REQUIRE( stack->top->itemType->data == &item3);
+  REQUIRE( top_item == &item3);
   printf("----------------------------------\n");
 }
 
@@ -241,13 +247,13 @@ TEST_CASE("Retorna o top da pilha")
   Stack *stack;
   int item1 = 5;
   char item2 = 'c';
-  StackNode *s = NULL;
+  void *s = NULL;
   stack = create_stack(2);
   push(stack, &item1);
   push(stack, &item2);
   s = top(stack);
   REQUIRE( stack != NULL );
-  REQUIRE( s->itemType->data == &item2);
+  REQUIRE( s == &item2);
 }
 
 /**
@@ -262,7 +268,7 @@ TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
   int item1 = 5;
   char item2 = 'c';
   char item3 = 'b';
-  StackNode *s = NULL;
+  void *s = NULL;
   stack = create_stack(2);
   push(stack, &item1);
   push(stack, &item2);
@@ -274,7 +280,7 @@ TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
   REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 3);
   REQUIRE( stack->maxSize == 3);
-  REQUIRE(s->itemType->data == &item3);
+  REQUIRE( s == &item3);
 }
 
 /**
