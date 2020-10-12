@@ -16,7 +16,7 @@ struct stackNode {
 };
 
 struct stack {
-	StackNode* top; //implementação por lista encadeada
+    StackNode* top; //implementação por lista encadeada
     int maxSize;
     int actualSize;
     ItemType* vector; //implementação por vetor
