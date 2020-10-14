@@ -31,7 +31,6 @@ TEST_CASE("Criar uma pilha vazia com um tamanho máximo de elementos")
 {
   Stack *stack;
   stack = create_stack(4);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->maxSize == 4 );
   REQUIRE( stack->actualSize == 0 );
 }
@@ -50,7 +49,6 @@ TEST_CASE("Empilhar um elemento do tipo inteiro")
   void *top_item;
   push(stack, &item);
   top_item = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
   REQUIRE( top_item == &item);
 }
@@ -72,10 +70,8 @@ TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
   push(stack, &item2);
   popped_item = pop(stack);
   top_item = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
   REQUIRE( top_item == &item1);
-  //REQUIRE( stack->top->itemType->data == &item1);
   REQUIRE(*(int *)popped_item == item2);
 }
 
@@ -98,9 +94,34 @@ TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
   push(stack, &item2);
   popped_item = pop(stack);
   top_item = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 1 );
   REQUIRE( top_item == &item1);
+  REQUIRE(*(char *)popped_item == item2);
+}
+
+/**
+ * @brief Test case para testar a capacidade da pilha em empilhar diferentes tipos de elementos.
+ * Aceitação ocorre com a pilha criada, seu tamanho igual a 1, seu topo como o primeiro elemento empilhado
+ * e o elemento retirado sendo o char que foi empilhado por último.
+ * 
+ */
+TEST_CASE("Empilha um inteiro e um char, desempilha o elemento tipo char e empilha um float")
+{
+  Stack *stack;
+  int item1 = 5;
+  char item2 = 'c';
+  float item3 = 10000;
+  void *popped_item;
+  void *top_item;
+
+  stack = create_stack(3);
+  push(stack, &item1);
+  push(stack, &item2);
+  popped_item = pop(stack);
+  push(stack, &item3);
+  top_item = top(stack);
+  REQUIRE( stack->actualSize == 2 );
+  REQUIRE( top_item == &item3);
   REQUIRE(*(char *)popped_item == item2);
 }
 
@@ -145,7 +166,6 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   push(stack, &item3);
   push(stack, &item4);
   top_item = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 3 );
   REQUIRE( top_item == &item3);
   printf("----------------------------------\n");
@@ -170,7 +190,6 @@ TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
   pop(stack);
   pop(stack);
 
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( stack->top == NULL);
   printf("----------------------------------\n");
@@ -193,7 +212,6 @@ TEST_CASE("Empilha 2 elementos verifica se a pilha está cheia")
   push(stack, &item1);
   push(stack, &item2);
   full = is_full(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 2 );
   REQUIRE( full == true);
 }
@@ -211,7 +229,6 @@ TEST_CASE("Verifica se a pilha está vazia")
   bool empty = false;
   stack = create_stack(2);
   empty = is_empty(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( empty == true);
 }
@@ -232,7 +249,6 @@ TEST_CASE("Empilha dois elementos, desempilha os mesmos e verifica se a pilha es
   pop(stack);
   pop(stack);
   empty = is_empty(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( empty == true);
 }
@@ -252,7 +268,6 @@ TEST_CASE("Retorna o top da pilha")
   push(stack, &item1);
   push(stack, &item2);
   s = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( s == &item2);
 }
 
@@ -277,7 +292,6 @@ TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
     push(stack, &item3);
   }
   s = top(stack);
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 3);
   REQUIRE( stack->maxSize == 3);
   REQUIRE( s == &item3);
@@ -302,7 +316,6 @@ TEST_CASE("Cria uma pilha e diminui seu tamanho")
   printf("---------------------------------- Teste redução pilha ----------------------------------\n");
   size = set_size(stack, 1);
 
-  REQUIRE( stack != NULL );
   REQUIRE( stack->actualSize == 2);
   REQUIRE( stack->maxSize == 2);
   REQUIRE(size == false);

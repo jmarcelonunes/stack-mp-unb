@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+# dependencies
+/.vscode
+
+.DS_Store
+
 # Object files
 # *.o
 # *.ko

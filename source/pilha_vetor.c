@@ -38,15 +38,15 @@ Stack* create_stack(int maxsize)
  * @param element 
  */
 void push (Stack *p, void *element){
-    if(p->actualSize == p->maxSize){
+    if(is_full(p)){
         printf("Pilha está cheia!\n");
     }
     else{
         ItemType *e = (ItemType*)malloc(sizeof(element));
         e->data = element;
         p->vector[p->actualSize++] = *e;
+        free(e);
     }
-
 }
 
 /**
@@ -61,12 +61,11 @@ void push (Stack *p, void *element){
  * @return void* 
  */
 void* pop(Stack *p){
-    if(p->actualSize != 0){
+    if(!is_empty(p)){
         void *e = p->vector[--p->actualSize].data;
         return e;
     }else{
-        int i = -1;
-        void *r = &i;
+        void *r = NULL;
         printf("Pilha está vazia.\n");
         return r;
     }

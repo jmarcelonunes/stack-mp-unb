@@ -40,7 +40,7 @@ Stack* create_stack(int maxsize)
  * @param element 
  */
 void push (Stack *p, void *element){
-    if(p->actualSize < p->maxSize){
+    if(!is_full(p)){
         StackNode* s = (StackNode*) malloc(sizeof(StackNode));
         ItemType* e = (ItemType*)malloc(sizeof(element));
         e->data = element;
@@ -67,7 +67,7 @@ void push (Stack *p, void *element){
  * @return void* 
  */
 void* pop(Stack *p){
-    if(p->top != NULL){
+    if(!is_empty(p)){
         StackNode* s = p->top;
         void *e = s->itemType->data;
         p->top = s->next;
@@ -76,8 +76,7 @@ void* pop(Stack *p){
         return e;
     }else{
         printf("Pilha está vazia.\n");
-        int i = -1;
-        void *r = &i;
+        void *r = NULL;
         return r;
     }
 }
@@ -95,6 +94,8 @@ void destroy_stack (Stack **p){
     StackNode *s = (*p)->top;
     while (s != NULL){
         StackNode *aux = s->next;
+        ItemType *e = s->itemType;
+        free(e);
         free(s);
         s = aux;
     } 
