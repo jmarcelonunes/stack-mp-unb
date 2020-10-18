@@ -17,3 +17,5 @@ Para encontrar o histórico de versões, basta entrar em meu repositório do git
 https://github.com/jmarcelonunes/stack-mp-unb
 
 E acesse a aba commits.
+
+A documentação gerada por doxygen pode ser acessada em source/html/index.html
