@@ -1,15 +1,14 @@
 /**
- * @file pilha.c
+ * @file pilha_vetor.c
  * @author João Marcelo Nunes Chaves
- * @brief Arquivo que implementa funções para a biblioteca de pilha com lista encadeada
+ * @brief Arquivo que implementa as funções de pilha por vetor
  * @version 1.0
- * @date 2020-10-11
+ * @date 2020-10-18
  * 
  * @copyright Copyright (c) 2020
  * 
  */
 #include "pilha.h"
-
 
 /**
  * @brief Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada.

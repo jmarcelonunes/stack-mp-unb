@@ -1,4 +1,4 @@
-Para compilar a implementação da pilha por lista encadeada, basta rodar o comando no diretório src:
+Para compilar a implementação da pilha por lista encadeada, basta rodar o comando no diretório source:
 
 make pilhaLista
 

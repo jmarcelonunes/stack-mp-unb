@@ -1,9 +1,9 @@
 /**
- * @file pilha.c
+ * @file pilha_lista.c
  * @author João Marcelo Nunes Chaves
  * @brief Arquivo que implementa funções para a biblioteca de pilha com lista encadeada
  * @version 1.0
- * @date 2020-10-11
+ * @date 2020-10-18
  * 
  * @copyright Copyright (c) 2020
  * 
