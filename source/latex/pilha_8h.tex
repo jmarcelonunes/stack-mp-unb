@@ -1,0 +1,291 @@
+\hypertarget{pilha_8h}{}\section{/\+Users/joaomarcelonunes/stack-\/mp-\/unb/include/pilha.h File Reference}
+\label{pilha_8h}\index{/Users/joaomarcelonunes/stack-\/mp-\/unb/include/pilha.h@{/Users/joaomarcelonunes/stack-\/mp-\/unb/include/pilha.h}}
+
+
+Arquivo header que define os protótipos das funções utilizadas e as estruturas definidas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitem_type}{item\+Type}}
+\begin{DoxyCompactList}\small\item\em Estrutura do \mbox{\hyperlink{structitem_type}{item\+Type}}. O conteúdo é armazenado no atributo data. Data é um ponteiro para void, permitindo assim armazenar os mais variados tipos. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstack_node}{stack\+Node}}
+\begin{DoxyCompactList}\small\item\em Estrutura do nó da implementação da pilha por lista encadeada. Possui um ponteiro next para o próximo item. Possui um ponteiro para o \mbox{\hyperlink{structitem_type}{item\+Type}} armazenado no nó. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstack}{stack}}
+\begin{DoxyCompactList}\small\item\em Estrutura geral da pilha. Possui um ponteiro para o nó do topo, utilizado na implementação por lista encadeada. Um inteiro max\+Size que define o tamanho máximo da pilha. Um inteiro actual\+Size que define o tamanho atual da pilha. Um vetor de \mbox{\hyperlink{structitem_type}{item\+Type}} chamado vector, utilizado na implementação por vetor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structstack_node}{stack\+Node}} \mbox{\hyperlink{pilha_8h_aa2b918390d6428b82c080bb2b136e639}{Stack\+Node}}
+\begin{DoxyCompactList}\small\item\em Define o tipos Stack\+Node. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structstack}{stack}} \mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}
+\begin{DoxyCompactList}\small\item\em Define o tipos Stack. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structitem_type}{item\+Type}} \mbox{\hyperlink{pilha_8h_ae525c0f6c68dcd67700d0895c747ada4}{Item\+Type}}
+\begin{DoxyCompactList}\small\item\em Define o tipo \mbox{\hyperlink{structitem_type}{item\+Type}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$ \mbox{\hyperlink{pilha_8h_affae2c1d2a29b215fedd86e7f9f5b10b}{create\+Stack}} (int)
+\begin{DoxyCompactList}\small\item\em Protótipo da função de criar a pilha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha_8h_aa954757e95c9eea284bc760613eaf9a9}{push}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void). \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha_8h_a2dced84e6ce9145d1d3006dff9ca81ed}{pop}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Protótipo da função de desempilhar um item. Recebe a pilha. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha_8h_a723e8074cf3713da2d5f5127b0027f62}{top}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Retorna o topo da pilha. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha_8h_aa4dfc473f0fa84daa87cc5939b44bb92}{set\+Size}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha_8h_a42be4ec23b145035f909dd726b6fc498}{is\+Full}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Confere se a pilha está cheia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha_8h_ab2744b31af0dd4b378b41557f7a9610a}{is\+Empty}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Confere se a pilha está vazia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha_8h_a46c02eed2d887c737a7f5bb19e34a66f}{destroy\+Stack}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em Função que retira a pilha da memória. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo header que define os protótipos das funções utilizadas e as estruturas definidas. 
+
+\begin{DoxyAuthor}{Author}
+João Marcelo Nunes Chaves 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/10-\/11
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{pilha_8h_ae525c0f6c68dcd67700d0895c747ada4}\label{pilha_8h_ae525c0f6c68dcd67700d0895c747ada4}} 
+\index{pilha.h@{pilha.h}!ItemType@{ItemType}}
+\index{ItemType@{ItemType}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{ItemType}{ItemType}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structitem_type}{item\+Type}} \mbox{\hyperlink{pilha_8h_ae525c0f6c68dcd67700d0895c747ada4}{Item\+Type}}}
+
+
+
+Define o tipo \mbox{\hyperlink{structitem_type}{item\+Type}}. 
+
+\mbox{\Hypertarget{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}\label{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}} 
+\index{pilha.h@{pilha.h}!Stack@{Stack}}
+\index{Stack@{Stack}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{Stack}{Stack}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstack}{stack}} \mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}}
+
+
+
+Define o tipos Stack. 
+
+\mbox{\Hypertarget{pilha_8h_aa2b918390d6428b82c080bb2b136e639}\label{pilha_8h_aa2b918390d6428b82c080bb2b136e639}} 
+\index{pilha.h@{pilha.h}!StackNode@{StackNode}}
+\index{StackNode@{StackNode}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{StackNode}{StackNode}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstack_node}{stack\+Node}} \mbox{\hyperlink{pilha_8h_aa2b918390d6428b82c080bb2b136e639}{Stack\+Node}}}
+
+
+
+Define o tipos Stack\+Node. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pilha_8h_affae2c1d2a29b215fedd86e7f9f5b10b}\label{pilha_8h_affae2c1d2a29b215fedd86e7f9f5b10b}} 
+\index{pilha.h@{pilha.h}!createStack@{createStack}}
+\index{createStack@{createStack}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{createStack()}{createStack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}$\ast$ create\+Stack (\begin{DoxyParamCaption}\item[{int}]{maxsize }\end{DoxyParamCaption})}
+
+
+
+Protótipo da função de criar a pilha. 
+
+\begin{DoxyReturn}{Returns}
+retorna um ponteiro para a pilha.
+\end{DoxyReturn}
+Protótipo da função de criar a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em maxsize} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha_8h_a46c02eed2d887c737a7f5bb19e34a66f}\label{pilha_8h_a46c02eed2d887c737a7f5bb19e34a66f}} 
+\index{pilha.h@{pilha.h}!destroyStack@{destroyStack}}
+\index{destroyStack@{destroyStack}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{destroyStack()}{destroyStack()}}
+{\footnotesize\ttfamily void destroy\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que retira a pilha da memória. 
+
+Função que retira a pilha da memória.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha_8h_ab2744b31af0dd4b378b41557f7a9610a}\label{pilha_8h_ab2744b31af0dd4b378b41557f7a9610a}} 
+\index{pilha.h@{pilha.h}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Confere se a pilha está vazia. 
+
+\begin{DoxyReturn}{Returns}
+true se a pilha está vazia 
+
+false se a pilha não está vazia
+\end{DoxyReturn}
+Confere se a pilha está vazia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha_8h_a42be4ec23b145035f909dd726b6fc498}\label{pilha_8h_a42be4ec23b145035f909dd726b6fc498}} 
+\index{pilha.h@{pilha.h}!isFull@{isFull}}
+\index{isFull@{isFull}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool is\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Confere se a pilha está cheia. 
+
+\begin{DoxyReturn}{Returns}
+true se a pilha está cheia. 
+
+false se não está cheia.
+\end{DoxyReturn}
+Confere se a pilha está cheia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha_8h_a2dced84e6ce9145d1d3006dff9ca81ed}\label{pilha_8h_a2dced84e6ce9145d1d3006dff9ca81ed}} 
+\index{pilha.h@{pilha.h}!pop@{pop}}
+\index{pop@{pop}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void$\ast$ pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Protótipo da função de desempilhar um item. Recebe a pilha. 
+
+\begin{DoxyReturn}{Returns}
+O ponteiro para o item retirado.
+\end{DoxyReturn}
+Protótipo da função de desempilhar um item. Recebe a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha_8h_aa954757e95c9eea284bc760613eaf9a9}\label{pilha_8h_aa954757e95c9eea284bc760613eaf9a9}} 
+\index{pilha.h@{pilha.h}!push@{push}}
+\index{push@{push}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void). 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void).
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha_8h_aa4dfc473f0fa84daa87cc5939b44bb92}\label{pilha_8h_aa4dfc473f0fa84daa87cc5939b44bb92}} 
+\index{pilha.h@{pilha.h}!setSize@{setSize}}
+\index{setSize@{setSize}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily bool set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado. 
+
+\begin{DoxyReturn}{Returns}
+true se foi possível realizar a alteração de tamanho. 
+
+false se não foi possível realizar a alteração de tamanho.
+\end{DoxyReturn}
+Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha_8h_a723e8074cf3713da2d5f5127b0027f62}\label{pilha_8h_a723e8074cf3713da2d5f5127b0027f62}} 
+\index{pilha.h@{pilha.h}!top@{top}}
+\index{top@{top}!pilha.h@{pilha.h}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily void$\ast$ top (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Retorna o topo da pilha. 
+
+\begin{DoxyReturn}{Returns}
+Retorna o ponteiro para o elemento no topo.
+\end{DoxyReturn}
+Retorna o topo da pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack\+Node$\ast$ 
+\end{DoxyReturn}

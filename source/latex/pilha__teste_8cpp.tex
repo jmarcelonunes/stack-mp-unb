@@ -19,6 +19,8 @@ Arquivo de testes para a biblioteca de pilha implementadas por lista encadeada.
 \begin{DoxyCompactList}\small\item\em Test case que empilha 2 elementos e desempilha um elemento da pilha. Aceitação ocorre com a pilha com o tamanho de 1 elemento, o elemento retirado sendo igual ao último elemento inserido e o topo da pilha com o primeiro elemento inserido. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{pilha__teste_8cpp_a95ff3b17ab747f1f2192f5e5188cf548}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Empilha um inteiro e um char e desempilha o elemento tipo char\char`\"{})
 \begin{DoxyCompactList}\small\item\em Test case para testar a capacidade da pilha em empilhar diferentes tipos de elementos. Aceitação ocorre com a pilha criada, seu tamanho igual a 1, seu topo como o primeiro elemento empilhado e o elemento retirado sendo o char que foi empilhado por último. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{pilha__teste_8cpp_a2dce60e906785c4c7a98dbae9d14513f}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Empilha um inteiro e um char, desempilha o elemento tipo char e empilha um float\char`\"{})
+\begin{DoxyCompactList}\small\item\em Test case para testar a capacidade da pilha em empilhar diferentes tipos de elementos. Aceitação ocorre com a pilha criada, seu tamanho igual a 1, seu topo como o primeiro elemento empilhado e o elemento retirado sendo o char que foi empilhado por último. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{pilha__teste_8cpp_a5ed1fb5342807517c08154c545917f61}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Destroi uma pilha de 3 elementos\char`\"{})
 \begin{DoxyCompactList}\small\item\em Test case para a destruição da pilha na memória. Aceitação ocorre com o ponteiro da pilha sendo N\+U\+LL. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{pilha__teste_8cpp_a42e4dafd8160333e7133ff28b902b1d4}\label{pilha__teste_8cpp_a42e4dafd8160333e7133ff28b902b1d4}} 
@@ -34,7 +36,7 @@ Arquivo de testes para a biblioteca de pilha implementadas por lista encadeada.
 \mbox{\Hypertarget{pilha__teste_8cpp_ae72988391d51c6b0da6da007139eb0ff}\label{pilha__teste_8cpp_ae72988391d51c6b0da6da007139eb0ff}} 
 \mbox{\hyperlink{pilha__teste_8cpp_ae72988391d51c6b0da6da007139eb0ff}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Empilha dois elementos, desempilha os mesmos e verifica se a pilha está vazia\char`\"{})
 \begin{DoxyCompactList}\small\item\em Test case que empilha dois elementos, desempilha os mesmos e verifica se a pilha está vazia Aceitação ocorre com a pilha criada, seu tamanho em zero e o retorno da função is\+\_\+empty como true. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{pilha__teste_8cpp_abe0de1b7db76ea4e1a0bf5e5b1e771a0}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Retorna o \mbox{\hyperlink{pilha_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} da pilha\char`\"{})
+\mbox{\hyperlink{pilha__teste_8cpp_abe0de1b7db76ea4e1a0bf5e5b1e771a0}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Retorna o \mbox{\hyperlink{pilha__vetor_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} da pilha\char`\"{})
 \begin{DoxyCompactList}\small\item\em Test case para retornar o topo da pilha Aceitação ocorre com o elemento retornado da função top como sendo, de fato, o topo da pilha. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{pilha__teste_8cpp_aa9f4a61b9089c3a941d152ef534d9795}{T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\char`\"{}Cria uma pilha e aumenta seu tamanho máximo\char`\"{})
 \begin{DoxyCompactList}\small\item\em Test case para testar o aumento do tamanho máximo da pilha. Aceitação ocorre com tamanho da pilha atualizado, seu tamanho máximo atualizado e o topo sendo o último elemento inserido após a mudança de tamanho máximo. \end{DoxyCompactList}\item 
@@ -63,7 +65,7 @@ Copyright (c) 2020
 \mbox{\Hypertarget{pilha__teste_8cpp_a768cd2699c63d27558cffc35967a8cb9}\label{pilha__teste_8cpp_a768cd2699c63d27558cffc35967a8cb9}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Criar uma pilha vazia com um tamanho máximo de elementos\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -73,7 +75,7 @@ Test case para testar a criação de uma pilha.
 Aceitação ocorre com uma pilha alocado em memória e com um tamanho máximo definido na chamada da função A pilha também deve estar vazia \mbox{\Hypertarget{pilha__teste_8cpp_af482cd49a55c0b25f6333e8df0af45ef}\label{pilha__teste_8cpp_af482cd49a55c0b25f6333e8df0af45ef}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Empilhar um elemento do tipo inteiro\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -83,8 +85,18 @@ Test case para empilhar um elemento na pilha.
 Ao final do teste, a pilha deve ter sido criada, seu tamanho deve ser de 1 e o elemento passado na função push deve estar no topo da pilha. \mbox{\Hypertarget{pilha__teste_8cpp_a95ff3b17ab747f1f2192f5e5188cf548}\label{pilha__teste_8cpp_a95ff3b17ab747f1f2192f5e5188cf548}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Empilha um inteiro e um char e desempilha o elemento tipo char\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Test case para testar a capacidade da pilha em empilhar diferentes tipos de elementos. Aceitação ocorre com a pilha criada, seu tamanho igual a 1, seu topo como o primeiro elemento empilhado e o elemento retirado sendo o char que foi empilhado por último. 
+
+\mbox{\Hypertarget{pilha__teste_8cpp_a2dce60e906785c4c7a98dbae9d14513f}\label{pilha__teste_8cpp_a2dce60e906785c4c7a98dbae9d14513f}} 
+\index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Empilha um inteiro e um char}]{,  }\item[{desempilha o elemento tipo char e empilha um float\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -93,7 +105,7 @@ Test case para testar a capacidade da pilha em empilhar diferentes tipos de elem
 \mbox{\Hypertarget{pilha__teste_8cpp_a5ed1fb5342807517c08154c545917f61}\label{pilha__teste_8cpp_a5ed1fb5342807517c08154c545917f61}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Destroi uma pilha de 3 elementos\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -103,7 +115,7 @@ Test case para a destruição da pilha na memória. Aceitação ocorre com o pon
 \mbox{\Hypertarget{pilha__teste_8cpp_aa1d06909ca909cfae7daa594ee8206bd}\label{pilha__teste_8cpp_aa1d06909ca909cfae7daa594ee8206bd}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Empilha 2 elementos verifica se a pilha está cheia\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -113,7 +125,7 @@ Test case para verificar se a pilha está cheia. Aceitação ocorre com a pilha 
 \mbox{\Hypertarget{pilha__teste_8cpp_afdfd6cc51cb44846be56c2f5d0c180da}\label{pilha__teste_8cpp_afdfd6cc51cb44846be56c2f5d0c180da}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Verifica se a pilha está vazia\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -123,8 +135,8 @@ Test case para verificar se a pilha está vazia. Aceitação ocorre com uma pilh
 \mbox{\Hypertarget{pilha__teste_8cpp_abe0de1b7db76ea4e1a0bf5e5b1e771a0}\label{pilha__teste_8cpp_abe0de1b7db76ea4e1a0bf5e5b1e771a0}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Retorna o \mbox{\hyperlink{pilha_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} da pilha\char`\"{}}]{ }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Retorna o \mbox{\hyperlink{pilha__vetor_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} da pilha\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -133,7 +145,7 @@ Test case para retornar o topo da pilha Aceitação ocorre com o elemento retorn
 \mbox{\Hypertarget{pilha__teste_8cpp_aa9f4a61b9089c3a941d152ef534d9795}\label{pilha__teste_8cpp_aa9f4a61b9089c3a941d152ef534d9795}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Cria uma pilha e aumenta seu tamanho máximo\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 
@@ -143,7 +155,7 @@ Test case para testar o aumento do tamanho máximo da pilha. Aceitação ocorre 
 \mbox{\Hypertarget{pilha__teste_8cpp_a1c6310cc65372ca8568a570c91b9a417}\label{pilha__teste_8cpp_a1c6310cc65372ca8568a570c91b9a417}} 
 \index{pilha\_teste.cpp@{pilha\_teste.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!pilha\_teste.cpp@{pilha\_teste.cpp}}
-\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+\subsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
 {\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Cria uma pilha e diminui seu tamanho\char`\"{}}]{ }\end{DoxyParamCaption})}
 
 

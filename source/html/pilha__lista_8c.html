@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: pilha.c File Reference</title>
+<title>My Project: pilha_lista.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,56 +64,56 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">pilha.c File Reference</div>  </div>
+<div class="title">pilha_lista.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Arquivo que implementa funções para a biblioteca de pilha com lista encadeada.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;pilha.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="pilha_8h_source.html">pilha.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abc6bc580e454342c3fe60700e631c128"><td class="memItemLeft" align="right" valign="top">Stack *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#abc6bc580e454342c3fe60700e631c128">create_stack</a> (int maxsize)</td></tr>
-<tr class="memdesc:abc6bc580e454342c3fe60700e631c128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui um topo NULL, atribui o tamanho máximo e atribui o tamanho atual como 0.  <a href="#abc6bc580e454342c3fe60700e631c128">More...</a><br /></td></tr>
-<tr class="separator:abc6bc580e454342c3fe60700e631c128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad084cc447a52406bc62d079cc8287d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#ad084cc447a52406bc62d079cc8287d99">push</a> (Stack *p, void *element)</td></tr>
-<tr class="memdesc:ad084cc447a52406bc62d079cc8287d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de itemType para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha.  <a href="#ad084cc447a52406bc62d079cc8287d99">More...</a><br /></td></tr>
+<tr class="memitem:a2bbcb2d595fbd40661a8bfdc5b6f985d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#a2bbcb2d595fbd40661a8bfdc5b6f985d">createStack</a> (int maxsize)</td></tr>
+<tr class="memdesc:a2bbcb2d595fbd40661a8bfdc5b6f985d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui um topo NULL, atribui o tamanho máximo e atribui o tamanho atual como 0.  <a href="#a2bbcb2d595fbd40661a8bfdc5b6f985d">More...</a><br /></td></tr>
+<tr class="separator:a2bbcb2d595fbd40661a8bfdc5b6f985d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad084cc447a52406bc62d079cc8287d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#ad084cc447a52406bc62d079cc8287d99">push</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p, void *element)</td></tr>
+<tr class="memdesc:ad084cc447a52406bc62d079cc8287d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de <a class="el" href="structitem_type.html" title="Estrutura do itemType. O conteúdo é armazenado no atributo data. Data é um ponteiro para void,...">itemType</a> para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha.  <a href="#ad084cc447a52406bc62d079cc8287d99">More...</a><br /></td></tr>
 <tr class="separator:ad084cc447a52406bc62d079cc8287d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d525657d0356ef69fc20e09a0dee2bf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#a4d525657d0356ef69fc20e09a0dee2bf">pop</a> (Stack *p)</td></tr>
+<tr class="memitem:a4d525657d0356ef69fc20e09a0dee2bf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#a4d525657d0356ef69fc20e09a0dee2bf">pop</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p)</td></tr>
 <tr class="memdesc:a4d525657d0356ef69fc20e09a0dee2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado.  <a href="#a4d525657d0356ef69fc20e09a0dee2bf">More...</a><br /></td></tr>
 <tr class="separator:a4d525657d0356ef69fc20e09a0dee2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8c3b43ca48c88bf7a97520a9312713c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#aa8c3b43ca48c88bf7a97520a9312713c">destroy_stack</a> (Stack **p)</td></tr>
-<tr class="memdesc:aa8c3b43ca48c88bf7a97520a9312713c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como NULL.  <a href="#aa8c3b43ca48c88bf7a97520a9312713c">More...</a><br /></td></tr>
-<tr class="separator:aa8c3b43ca48c88bf7a97520a9312713c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f283ae57cd01f8b76075c109d74db7c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#a6f283ae57cd01f8b76075c109d74db7c">top</a> (Stack *p)</td></tr>
+<tr class="memitem:a5dfb0bbabf5f16b06a38ed617867e7c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#a5dfb0bbabf5f16b06a38ed617867e7c1">destroyStack</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> **p)</td></tr>
+<tr class="memdesc:a5dfb0bbabf5f16b06a38ed617867e7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como NULL.  <a href="#a5dfb0bbabf5f16b06a38ed617867e7c1">More...</a><br /></td></tr>
+<tr class="separator:a5dfb0bbabf5f16b06a38ed617867e7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f283ae57cd01f8b76075c109d74db7c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#a6f283ae57cd01f8b76075c109d74db7c">top</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p)</td></tr>
 <tr class="memdesc:a6f283ae57cd01f8b76075c109d74db7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna o topo da pilha Retorna o topo da pilha passada para a função.  <a href="#a6f283ae57cd01f8b76075c109d74db7c">More...</a><br /></td></tr>
 <tr class="separator:a6f283ae57cd01f8b76075c109d74db7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3d9cd3568382eb8adae2af010001c1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#ad3d9cd3568382eb8adae2af010001c1d">is_empty</a> (Stack *p)</td></tr>
-<tr class="memdesc:ad3d9cd3568382eb8adae2af010001c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false.  <a href="#ad3d9cd3568382eb8adae2af010001c1d">More...</a><br /></td></tr>
-<tr class="separator:ad3d9cd3568382eb8adae2af010001c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa07cd7f175ae5c2ce7ed1e61c2de4ee1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#aa07cd7f175ae5c2ce7ed1e61c2de4ee1">is_full</a> (Stack *p)</td></tr>
-<tr class="memdesc:aa07cd7f175ae5c2ce7ed1e61c2de4ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false.  <a href="#aa07cd7f175ae5c2ce7ed1e61c2de4ee1">More...</a><br /></td></tr>
-<tr class="separator:aa07cd7f175ae5c2ce7ed1e61c2de4ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae14dc4fdc70414931a424afdd7adf528"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha_8c.html#ae14dc4fdc70414931a424afdd7adf528">set_size</a> (Stack *p, int size)</td></tr>
-<tr class="memdesc:ae14dc4fdc70414931a424afdd7adf528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza a mudança do tamanho máximo da pilha. Verifica se é possível realizar a mudança do tamanho sem que haja perda de dados. Retorna true se o tamanho pôde ser alterado ou retorna false caso o tamanho passado seja menor que o tamanho atual da pilha.  <a href="#ae14dc4fdc70414931a424afdd7adf528">More...</a><br /></td></tr>
-<tr class="separator:ae14dc4fdc70414931a424afdd7adf528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5184102a3ee7835a5cbbba8313dbf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#aaa5184102a3ee7835a5cbbba8313dbf2">isEmpty</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p)</td></tr>
+<tr class="memdesc:aaa5184102a3ee7835a5cbbba8313dbf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false.  <a href="#aaa5184102a3ee7835a5cbbba8313dbf2">More...</a><br /></td></tr>
+<tr class="separator:aaa5184102a3ee7835a5cbbba8313dbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f927c9fb4b41f16b6fc53ee88fa5db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#ab6f927c9fb4b41f16b6fc53ee88fa5db">isFull</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p)</td></tr>
+<tr class="memdesc:ab6f927c9fb4b41f16b6fc53ee88fa5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false.  <a href="#ab6f927c9fb4b41f16b6fc53ee88fa5db">More...</a><br /></td></tr>
+<tr class="separator:ab6f927c9fb4b41f16b6fc53ee88fa5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ad1755e0e51f188ed2428dc77cd6e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pilha__lista_8c.html#af6ad1755e0e51f188ed2428dc77cd6e4">setSize</a> (<a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *p, int size)</td></tr>
+<tr class="memdesc:af6ad1755e0e51f188ed2428dc77cd6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza a mudança do tamanho máximo da pilha. Verifica se é possível realizar a mudança do tamanho sem que haja perda de dados. Retorna true se o tamanho pôde ser alterado ou retorna false caso o tamanho passado seja menor que o tamanho atual da pilha.  <a href="#af6ad1755e0e51f188ed2428dc77cd6e4">More...</a><br /></td></tr>
+<tr class="separator:af6ad1755e0e51f188ed2428dc77cd6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Arquivo que implementa funções para a biblioteca de pilha com lista encadeada. </p>
 <dl class="section author"><dt>Author</dt><dd>João Marcelo Nunes Chaves </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2020-10-11</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2020-10-18</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2020 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="abc6bc580e454342c3fe60700e631c128"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc6bc580e454342c3fe60700e631c128">&#9670;&nbsp;</a></span>create_stack()</h2>
+<a id="a2bbcb2d595fbd40661a8bfdc5b6f985d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbcb2d595fbd40661a8bfdc5b6f985d">&#9670;&nbsp;</a></span>createStack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Stack* create_stack </td>
+          <td class="memname"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a>* createStack </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>maxsize</em></td><td>)</td>
@@ -123,6 +123,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui um topo NULL, atribui o tamanho máximo e atribui o tamanho atual como 0. </p>
+<p>Protótipo da função de criar a pilha.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">maxsize</td><td></td></tr>
@@ -133,16 +134,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa8c3b43ca48c88bf7a97520a9312713c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8c3b43ca48c88bf7a97520a9312713c">&#9670;&nbsp;</a></span>destroy_stack()</h2>
+<a id="a5dfb0bbabf5f16b06a38ed617867e7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfb0bbabf5f16b06a38ed617867e7c1">&#9670;&nbsp;</a></span>destroyStack()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void destroy_stack </td>
+          <td class="memname">void destroyStack </td>
           <td>(</td>
-          <td class="paramtype">Stack **&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> **&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -150,6 +151,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como NULL. </p>
+<p>Função que retira a pilha da memória.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -159,16 +161,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad3d9cd3568382eb8adae2af010001c1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3d9cd3568382eb8adae2af010001c1d">&#9670;&nbsp;</a></span>is_empty()</h2>
+<a id="aaa5184102a3ee7835a5cbbba8313dbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5184102a3ee7835a5cbbba8313dbf2">&#9670;&nbsp;</a></span>isEmpty()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_empty </td>
+          <td class="memname">bool isEmpty </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -176,6 +178,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false. </p>
+<p>Confere se a pilha está vazia.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -188,16 +191,16 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="aa07cd7f175ae5c2ce7ed1e61c2de4ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa07cd7f175ae5c2ce7ed1e61c2de4ee1">&#9670;&nbsp;</a></span>is_full()</h2>
+<a id="ab6f927c9fb4b41f16b6fc53ee88fa5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f927c9fb4b41f16b6fc53ee88fa5db">&#9670;&nbsp;</a></span>isFull()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_full </td>
+          <td class="memname">bool isFull </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,6 +208,7 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false. </p>
+<p>Confere se a pilha está cheia.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -226,7 +230,7 @@ false </dd></dl>
         <tr>
           <td class="memname">void* pop </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -234,6 +238,7 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. </p>
+<p>Protótipo da função de desempilhar um item. Recebe a pilha.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -253,7 +258,7 @@ false </dd></dl>
         <tr>
           <td class="memname">void push </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
@@ -270,7 +275,8 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de itemType para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha. </p>
+<p>Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de <a class="el" href="structitem_type.html" title="Estrutura do itemType. O conteúdo é armazenado no atributo data. Data é um ponteiro para void,...">itemType</a> para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha. </p>
+<p>Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -281,16 +287,16 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="ae14dc4fdc70414931a424afdd7adf528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae14dc4fdc70414931a424afdd7adf528">&#9670;&nbsp;</a></span>set_size()</h2>
+<a id="af6ad1755e0e51f188ed2428dc77cd6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ad1755e0e51f188ed2428dc77cd6e4">&#9670;&nbsp;</a></span>setSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool set_size </td>
+          <td class="memname">bool setSize </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
@@ -308,6 +314,7 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>Função que realiza a mudança do tamanho máximo da pilha. Verifica se é possível realizar a mudança do tamanho sem que haja perda de dados. Retorna true se o tamanho pôde ser alterado ou retorna false caso o tamanho passado seja menor que o tamanho atual da pilha. </p>
+<p>Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>
@@ -330,7 +337,7 @@ false </dd></dl>
         <tr>
           <td class="memname">void* top </td>
           <td>(</td>
-          <td class="paramtype">Stack *&#160;</td>
+          <td class="paramtype"><a class="el" href="pilha_8h.html#aa7883e8bf747b9dedec990b539df2cc0">Stack</a> *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -338,6 +345,7 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. </p>
+<p>Retorna o topo da pilha.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td></td></tr>

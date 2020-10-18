@@ -1,0 +1,211 @@
+\hypertarget{pilha__lista_8c}{}\section{pilha\+\_\+lista.\+c File Reference}
+\label{pilha__lista_8c}\index{pilha\_lista.c@{pilha\_lista.c}}
+
+
+Arquivo que implementa funções para a biblioteca de pilha com lista encadeada.  
+
+
+{\ttfamily \#include \char`\"{}pilha.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$ \mbox{\hyperlink{pilha__lista_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}{create\+Stack}} (int maxsize)
+\begin{DoxyCompactList}\small\item\em Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui um topo N\+U\+LL, atribui o tamanho máximo e atribui o tamanho atual como 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha__lista_8c_ad084cc447a52406bc62d079cc8287d99}{push}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p, void $\ast$element)
+\begin{DoxyCompactList}\small\item\em Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de \mbox{\hyperlink{structitem_type}{item\+Type}} para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha__lista_8c_a4d525657d0356ef69fc20e09a0dee2bf}{pop}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha__lista_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}{destroy\+Stack}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como N\+U\+LL. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha__lista_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__lista_8c_aaa5184102a3ee7835a5cbbba8313dbf2}{is\+Empty}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__lista_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}{is\+Full}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__lista_8c_af6ad1755e0e51f188ed2428dc77cd6e4}{set\+Size}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p, int size)
+\begin{DoxyCompactList}\small\item\em Função que realiza a mudança do tamanho máximo da pilha. Verifica se é possível realizar a mudança do tamanho sem que haja perda de dados. Retorna true se o tamanho pôde ser alterado ou retorna false caso o tamanho passado seja menor que o tamanho atual da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo que implementa funções para a biblioteca de pilha com lista encadeada. 
+
+\begin{DoxyAuthor}{Author}
+João Marcelo Nunes Chaves 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/10-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pilha__lista_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}\label{pilha__lista_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!createStack@{createStack}}
+\index{createStack@{createStack}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{createStack()}{createStack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}$\ast$ create\+Stack (\begin{DoxyParamCaption}\item[{int}]{maxsize }\end{DoxyParamCaption})}
+
+
+
+Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui um topo N\+U\+LL, atribui o tamanho máximo e atribui o tamanho atual como 0. 
+
+Protótipo da função de criar a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em maxsize} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__lista_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}\label{pilha__lista_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!destroyStack@{destroyStack}}
+\index{destroyStack@{destroyStack}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{destroyStack()}{destroyStack()}}
+{\footnotesize\ttfamily void destroy\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Realiza um loop desalocando todos os elementos até o topo (sem perder referência) Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como N\+U\+LL. 
+
+Função que retira a pilha da memória.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha__lista_8c_aaa5184102a3ee7835a5cbbba8313dbf2}\label{pilha__lista_8c_aaa5184102a3ee7835a5cbbba8313dbf2}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para checar se a pilha está vazia Verifica se o topo é nulo Caso esteja vazia retorna true, caso contrário retorna false. 
+
+Confere se a pilha está vazia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__lista_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}\label{pilha__lista_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!isFull@{isFull}}
+\index{isFull@{isFull}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool is\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false. 
+
+Confere se a pilha está cheia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__lista_8c_a4d525657d0356ef69fc20e09a0dee2bf}\label{pilha__lista_8c_a4d525657d0356ef69fc20e09a0dee2bf}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!pop@{pop}}
+\index{pop@{pop}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void$\ast$ pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. 
+
+Protótipo da função de desempilhar um item. Recebe a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__lista_8c_ad084cc447a52406bc62d079cc8287d99}\label{pilha__lista_8c_ad084cc447a52406bc62d079cc8287d99}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!push@{push}}
+\index{push@{push}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o nó da pilha e para o elemento a ser adicionado na pilha Atribui o elemento passado para o dado na pilha. Atribui o endereço de memória de \mbox{\hyperlink{structitem_type}{item\+Type}} para o nó da pilha Atribui o próximo elemento da pilha. Aumenta o tamanho da pilha. Atribui o topo da pilha. 
+
+Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void).
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha__lista_8c_af6ad1755e0e51f188ed2428dc77cd6e4}\label{pilha__lista_8c_af6ad1755e0e51f188ed2428dc77cd6e4}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!setSize@{setSize}}
+\index{setSize@{setSize}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily bool set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Função que realiza a mudança do tamanho máximo da pilha. Verifica se é possível realizar a mudança do tamanho sem que haja perda de dados. Retorna true se o tamanho pôde ser alterado ou retorna false caso o tamanho passado seja menor que o tamanho atual da pilha. 
+
+Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__lista_8c_a6f283ae57cd01f8b76075c109d74db7c}\label{pilha__lista_8c_a6f283ae57cd01f8b76075c109d74db7c}} 
+\index{pilha\_lista.c@{pilha\_lista.c}!top@{top}}
+\index{top@{top}!pilha\_lista.c@{pilha\_lista.c}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily void$\ast$ top (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. 
+
+Retorna o topo da pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack\+Node$\ast$ 
+\end{DoxyReturn}

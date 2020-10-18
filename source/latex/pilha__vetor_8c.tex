@@ -1,0 +1,216 @@
+\hypertarget{pilha__vetor_8c}{}\section{pilha\+\_\+vetor.\+c File Reference}
+\label{pilha__vetor_8c}\index{pilha\_vetor.c@{pilha\_vetor.c}}
+
+
+Arquivo que implementa as funções de pilha por vetor.  
+
+
+{\ttfamily \#include \char`\"{}pilha.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$ \mbox{\hyperlink{pilha__vetor_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}{create\+Stack}} (int maxsize)
+\begin{DoxyCompactList}\small\item\em Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui o tamanho máximo e atribui o tamanho atual como 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha__vetor_8c_ad084cc447a52406bc62d079cc8287d99}{push}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p, void $\ast$element)
+\begin{DoxyCompactList}\small\item\em Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o elemento Atribui o elemento passado como parâmetro para o endereço de memória alocado Incrementa a posição da vetor e atribui o Item\+Type alocado para essa posição do vetor. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha__vetor_8c_a4d525657d0356ef69fc20e09a0dee2bf}{pop}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pilha__vetor_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}{destroy\+Stack}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Desaloca o vetor contido na pilha Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como N\+U\+LL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__vetor_8c_aaa5184102a3ee7835a5cbbba8313dbf2}{is\+Empty}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para checar se a pilha está vazia Verifica se a array está vazia Caso esteja vazia retorna true, caso contrário retorna false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__vetor_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}{is\+Full}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{pilha__vetor_8c_a6f283ae57cd01f8b76075c109d74db7c}{top}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{pilha__vetor_8c_af6ad1755e0e51f188ed2428dc77cd6e4}{set\+Size}} (\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$p, int size)
+\begin{DoxyCompactList}\small\item\em Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arquivo que implementa as funções de pilha por vetor. 
+
+\begin{DoxyAuthor}{Author}
+João Marcelo Nunes Chaves 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/10-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pilha__vetor_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}\label{pilha__vetor_8c_a2bbcb2d595fbd40661a8bfdc5b6f985d}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!createStack@{createStack}}
+\index{createStack@{createStack}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{createStack()}{createStack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}}$\ast$ create\+Stack (\begin{DoxyParamCaption}\item[{int}]{maxsize }\end{DoxyParamCaption})}
+
+
+
+Função para a criação da pilha. Recebe seu tamanho máximo e retorna o ponteiro da pilha criada. Aloca espaço de memória, atribui o tamanho máximo e atribui o tamanho atual como 0. 
+
+Protótipo da função de criar a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em maxsize} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__vetor_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}\label{pilha__vetor_8c_a5dfb0bbabf5f16b06a38ed617867e7c1}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!destroyStack@{destroyStack}}
+\index{destroyStack@{destroyStack}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{destroyStack()}{destroyStack()}}
+{\footnotesize\ttfamily void destroy\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$$\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para desalocar uma pilha por completo Recebe um ponteiro de ponteiro da pilha Desaloca o vetor contido na pilha Desaloca o ponteiro da pilha Atribui o ponteiro da pilha como N\+U\+LL. 
+
+Função que retira a pilha da memória.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha__vetor_8c_aaa5184102a3ee7835a5cbbba8313dbf2}\label{pilha__vetor_8c_aaa5184102a3ee7835a5cbbba8313dbf2}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para checar se a pilha está vazia Verifica se a array está vazia Caso esteja vazia retorna true, caso contrário retorna false. 
+
+Confere se a pilha está vazia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__vetor_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}\label{pilha__vetor_8c_ab6f927c9fb4b41f16b6fc53ee88fa5db}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!isFull@{isFull}}
+\index{isFull@{isFull}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool is\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se a pilha está cheia Caso o tamanho atual seja igual ao tamanho máximo retorna true, caso contrário retorna false. 
+
+Confere se a pilha está cheia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__vetor_8c_a4d525657d0356ef69fc20e09a0dee2bf}\label{pilha__vetor_8c_a4d525657d0356ef69fc20e09a0dee2bf}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!pop@{pop}}
+\index{pop@{pop}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void$\ast$ pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função para desempilhar elementos da pilha. Recebe a pilha e retira o elemento do topo Atribui o novo topo. Reduz o tamanho da pilha. Desaloca o ponteiro retirado da pilha. Retorna o endereço do elemento desempilhado. 
+
+Protótipo da função de desempilhar um item. Recebe a pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__vetor_8c_ad084cc447a52406bc62d079cc8287d99}\label{pilha__vetor_8c_ad084cc447a52406bc62d079cc8287d99}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!push@{push}}
+\index{push@{push}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Função para empilhar elementos na pilha. Recebe a pilha e o endereço de memória do elemento. Aloca memória para o elemento Atribui o elemento passado como parâmetro para o endereço de memória alocado Incrementa a posição da vetor e atribui o Item\+Type alocado para essa posição do vetor. 
+
+Protótipo da função de empilhar um item. Recebe a pilha e elemento (ponteiro para void).
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pilha__vetor_8c_af6ad1755e0e51f188ed2428dc77cd6e4}\label{pilha__vetor_8c_af6ad1755e0e51f188ed2428dc77cd6e4}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!setSize@{setSize}}
+\index{setSize@{setSize}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily bool set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado. 
+
+\begin{DoxyReturn}{Returns}
+true se foi possível realizar a alteração de tamanho. 
+
+false se não foi possível realizar a alteração de tamanho.
+\end{DoxyReturn}
+Altera o tamanho da pilha. Recebe a pilha e um inteiro com o tamanho solicitado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pilha__vetor_8c_a6f283ae57cd01f8b76075c109d74db7c}\label{pilha__vetor_8c_a6f283ae57cd01f8b76075c109d74db7c}} 
+\index{pilha\_vetor.c@{pilha\_vetor.c}!top@{top}}
+\index{top@{top}!pilha\_vetor.c@{pilha\_vetor.c}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily void$\ast$ top (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pilha_8h_aa7883e8bf747b9dedec990b539df2cc0}{Stack}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o topo da pilha Retorna o topo da pilha passada para a função. 
+
+Retorna o topo da pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stack\+Node$\ast$ 
+\end{DoxyReturn}
