@@ -30,7 +30,7 @@
 TEST_CASE("Criar uma pilha vazia com um tamanho máximo de elementos")
 {
   Stack *stack;
-  stack = create_stack(4);
+  stack = createStack(4);
   REQUIRE( stack->maxSize == 4 );
   REQUIRE( stack->actualSize == 0 );
 }
@@ -45,7 +45,7 @@ TEST_CASE("Empilhar um elemento do tipo inteiro")
 {
   Stack *stack;
   int item = 5;
-  stack = create_stack(3);
+  stack = createStack(3);
   void *top_item;
   push(stack, &item);
   top_item = top(stack);
@@ -65,7 +65,7 @@ TEST_CASE("Empilha dois inteiros e desempilha um elemento da pilha")
   int item2 = 2;
   void *popped_item;
   void *top_item;
-  stack = create_stack(3);
+  stack = createStack(3);
   push(stack, &item1);
   push(stack, &item2);
   popped_item = pop(stack);
@@ -89,7 +89,7 @@ TEST_CASE("Empilha um inteiro e um char e desempilha o elemento tipo char")
   void *popped_item;
   void *top_item;
 
-  stack = create_stack(3);
+  stack = createStack(3);
   push(stack, &item1);
   push(stack, &item2);
   popped_item = pop(stack);
@@ -114,7 +114,7 @@ TEST_CASE("Empilha um inteiro e um char, desempilha o elemento tipo char e empil
   void *popped_item;
   void *top_item;
 
-  stack = create_stack(3);
+  stack = createStack(3);
   push(stack, &item1);
   push(stack, &item2);
   popped_item = pop(stack);
@@ -137,11 +137,11 @@ TEST_CASE("Destroi uma pilha de 3 elementos")
   char item2 = 'c';
   int item3 = 10;
 
-  stack = create_stack(3);
+  stack = createStack(3);
   push(stack, &item1);
   push(stack, &item2);
   push(stack, &item3);
-  destroy_stack(&stack);
+  destroyStack(&stack);
   REQUIRE( stack == NULL );
 }
 
@@ -160,7 +160,7 @@ TEST_CASE("Tenta empilhar em uma pilha já cheia")
   void *top_item;
 
   printf("---------------------------------- Teste pilha cheia ----------------------------------\n");
-  stack = create_stack(3);
+  stack = createStack(3);
   push(stack, &item1);
   push(stack, &item2);
   push(stack, &item3);
@@ -183,7 +183,7 @@ TEST_CASE("Empilha 2 elementos e tenta desempilhar três elementos")
   int item1 = 5;
   char item2 = 'c';
   printf("---------------------------------- Teste pilha vazia ----------------------------------\n");
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
   pop(stack);
@@ -208,10 +208,10 @@ TEST_CASE("Empilha 2 elementos verifica se a pilha está cheia")
   int item1 = 5;
   char item2 = 'c';
   bool full = false;
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
-  full = is_full(stack);
+  full = isFull(stack);
   REQUIRE( stack->actualSize == 2 );
   REQUIRE( full == true);
 }
@@ -227,8 +227,8 @@ TEST_CASE("Verifica se a pilha está vazia")
 {
   Stack *stack;
   bool empty = false;
-  stack = create_stack(2);
-  empty = is_empty(stack);
+  stack = createStack(2);
+  empty = isEmpty(stack);
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( empty == true);
 }
@@ -243,12 +243,12 @@ TEST_CASE("Empilha dois elementos, desempilha os mesmos e verifica se a pilha es
   bool empty = false;
   int item1 = 5;
   char item2 = 'c';
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
   pop(stack);
   pop(stack);
-  empty = is_empty(stack);
+  empty = isEmpty(stack);
   REQUIRE( stack->actualSize == 0 );
   REQUIRE( empty == true);
 }
@@ -264,7 +264,7 @@ TEST_CASE("Retorna o top da pilha")
   int item1 = 5;
   char item2 = 'c';
   void *s = NULL;
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
   s = top(stack);
@@ -284,11 +284,11 @@ TEST_CASE("Cria uma pilha e aumenta seu tamanho máximo")
   char item2 = 'c';
   char item3 = 'b';
   void *s = NULL;
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
   
-  if(set_size(stack, 3)){
+  if(setSize(stack, 3)){
     push(stack, &item3);
   }
   s = top(stack);
@@ -310,11 +310,11 @@ TEST_CASE("Cria uma pilha e diminui seu tamanho")
   int item1 = 5;
   char item2 = 'c';
   bool size = false;
-  stack = create_stack(2);
+  stack = createStack(2);
   push(stack, &item1);
   push(stack, &item2);
   printf("---------------------------------- Teste redução pilha ----------------------------------\n");
-  size = set_size(stack, 1);
+  size = setSize(stack, 1);
 
   REQUIRE( stack->actualSize == 2);
   REQUIRE( stack->maxSize == 2);

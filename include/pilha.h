@@ -22,11 +22,11 @@ struct stack {
     ItemType* vector; //implementação por vetor
 };
 
-Stack* create_stack(int);
+Stack* createStack(int);
 void push(Stack *, void *);
 void* pop(Stack *);
 void* top(Stack *);
-bool set_size(Stack *, int);
-bool is_full(Stack *);
-bool is_empty(Stack *);
-void destroy_stack(Stack **);
+bool setSize(Stack *, int);
+bool isFull(Stack *);
+bool isEmpty(Stack *);
+void destroyStack(Stack **);

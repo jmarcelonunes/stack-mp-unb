@@ -1,0 +1,19 @@
+Para compilar a implementação da pilha por lista encadeada, basta rodar o comando no diretório src:
+
+make pilhaLista
+
+Para compilar a implementação da pilha por vetor, bastar rodar o comando, no diretório src:
+
+make pilhaVetor
+
+Para a execução dos testes, basta digitar em seu terminal:
+
+./pilha_teste
+
+No diretório raiz é possível encontrar uma captura de tela com a cobertura de testes do programa utilizando o gcov. Também é possível encontrar uma captura de tela com a execução do cppcheck.
+
+Para encontrar o histórico de versões, basta entrar em meu repositório do gitHub:
+
+https://github.com/jmarcelonunes/stack-mp-unb
+
+E acesse a aba commits.

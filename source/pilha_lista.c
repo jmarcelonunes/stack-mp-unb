@@ -17,7 +17,7 @@
  * @param maxsize 
  * @return Stack* 
  */
-Stack* create_stack(int maxsize)
+Stack* createStack(int maxsize)
 {
     Stack* p = (Stack*) malloc(sizeof(Stack));
     p->top = NULL;
@@ -40,7 +40,7 @@ Stack* create_stack(int maxsize)
  * @param element 
  */
 void push (Stack *p, void *element){
-    if(!is_full(p)){
+    if(!isFull(p)){
         StackNode* s = (StackNode*) malloc(sizeof(StackNode));
         ItemType* e = (ItemType*)malloc(sizeof(element));
         e->data = element;
@@ -67,7 +67,7 @@ void push (Stack *p, void *element){
  * @return void* 
  */
 void* pop(Stack *p){
-    if(!is_empty(p)){
+    if(!isEmpty(p)){
         StackNode* s = p->top;
         void *e = s->itemType->data;
         p->top = s->next;
@@ -90,7 +90,7 @@ void* pop(Stack *p){
  * 
  * @param p 
  */
-void destroy_stack (Stack **p){
+void destroyStack (Stack **p){
     StackNode *s = (*p)->top;
     while (s != NULL){
         StackNode *aux = s->next;
@@ -125,7 +125,7 @@ void* top (Stack *p){
  * @return true 
  * @return false 
  */
-bool is_empty (Stack *p){
+bool isEmpty (Stack *p){
     if(p->top == NULL)
     {
         return true;
@@ -145,7 +145,7 @@ bool is_empty (Stack *p){
  * @return true 
  * @return false 
  */
-bool is_full (Stack *p){
+bool isFull (Stack *p){
     if(p->actualSize == p->maxSize)
     {
         return true;
@@ -167,7 +167,7 @@ bool is_full (Stack *p){
  * @return true 
  * @return false 
  */
-bool set_size (Stack *p, int size){
+bool setSize (Stack *p, int size){
     if(p->actualSize < size){
         p->maxSize = size;
         return true;

@@ -17,7 +17,7 @@
  * @param maxsize 
  * @return Stack* 
  */
-Stack* create_stack(int maxsize)
+Stack* createStack(int maxsize)
 {
     Stack* p = (Stack*) malloc(sizeof(Stack));
     p->maxSize = maxsize;
@@ -38,7 +38,7 @@ Stack* create_stack(int maxsize)
  * @param element 
  */
 void push (Stack *p, void *element){
-    if(is_full(p)){
+    if(isFull(p)){
         printf("Pilha está cheia!\n");
     }
     else{
@@ -61,7 +61,7 @@ void push (Stack *p, void *element){
  * @return void* 
  */
 void* pop(Stack *p){
-    if(!is_empty(p)){
+    if(!isEmpty(p)){
         void *e = p->vector[--p->actualSize].data;
         return e;
     }else{
@@ -80,7 +80,7 @@ void* pop(Stack *p){
  * 
  * @param p 
  */
-void destroy_stack (Stack **p){
+void destroyStack (Stack **p){
     free((*p)->vector);
     free(*p);
     *p = NULL;
@@ -96,7 +96,7 @@ void destroy_stack (Stack **p){
  * @return true 
  * @return false 
  */
-bool is_empty (Stack *p){
+bool isEmpty (Stack *p){
     if(p->actualSize == 0)
     {
         return true;
@@ -116,7 +116,7 @@ bool is_empty (Stack *p){
  * @return true 
  * @return false 
  */
-bool is_full (Stack *p){
+bool isFull (Stack *p){
     if(p->actualSize == p->maxSize)
     {
         return true;
@@ -139,7 +139,7 @@ void* top (Stack *p){
 }
 
 
-bool set_size (Stack *p, int size){
+bool setSize (Stack *p, int size){
     if(p->actualSize < size){
         p->maxSize = size;
         p->vector = (ItemType *)realloc(p->vector, p->maxSize*sizeof(ItemType));
